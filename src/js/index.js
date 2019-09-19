@@ -1,4 +1,4 @@
-import { setInitialAriaValue } from './multi-select-accordion';
+import setInitialAriaValue from './helpers/set-aria';
 import { accordionToggleHandler } from './multi-select-accordion';
 
 // Multi Select Accordion

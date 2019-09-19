@@ -1,11 +1,3 @@
-function setInitialAriaValue(elements, aria, ariaValue) {
-  console.log(elements)
-	elements.forEach((element) => {
-    console.log('jhi')
-		element.setAttribute(`${aria}`, `${ariaValue}`);
-	});
-}
-
 function accordionToggleHandler(buttons) {
 	buttons.forEach((button) => {
 		button.addEventListener('click', toggleContent);
@@ -32,6 +24,7 @@ function toggleDetails(button) {
 }
 
 export {
-  setInitialAriaValue,
+	toggleButton,
+	toggleDetails,
   accordionToggleHandler,
 }
