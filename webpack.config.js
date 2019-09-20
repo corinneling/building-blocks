@@ -4,10 +4,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   devtool: 'eval-source-map',
   mode: 'development',
-  entry: './src/js/index.js',
+  entry: {
+    modal: './src/js/modal.js',
+    multiSelectAccordion: './src/js/multi-select-accordion.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist/js'),
-    filename: 'index.js'
+    filename: '[name].js' // to do: add content hashing -> filename: '[name]-[contenthash:8].js'
   },
   module: {
     rules: [

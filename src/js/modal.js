@@ -1,10 +1,11 @@
+const openModalButton = document.querySelector('.button--open-modal');
+const closeModalButton = document.querySelector('.button--close-modal');
+const modal = document.querySelector('.modal');
+const noJs = document.querySelector('.no-js');
 
-
-function modalSetup() {
-	const noJs = document.querySelector('.no-js');
-	noJs.classList.remove('no-js');
-
-	modal.setAttribute('aria-hidden', true)
+function modalSetup(noJsElement, modalElement) {
+	noJsElement.classList.remove('no-js');
+	modalElement.setAttribute('aria-hidden', true)
 }
 
 function openModalHandler() {
@@ -15,24 +16,22 @@ function closeModalHandler() {
 	closeModalButton.addEventListener('click', closeModal);
 }
 
-async function openModal(e) {
-	let hiddenValue = modal.getAttribute('aria-hidden');
-	if (hiddenValue === 'true') {
-		hiddenValue = 'false';
-	}
-	await modal.setAttribute('aria-hidden', hiddenValue);
+ function openModal(e) {
+	const hiddenValue = modal.getAttribute('aria-hidden');
+	const newValue = hiddenValue === 'true' ? 'false' : 'true';
+	modal.setAttribute('aria-hidden', newValue);
 
 	const formField = document.getElementById('newsletter-name');
 	formField.focus();
 	trapFocus(e);
 }
 
-async function closeModal() {
+function closeModal() {
 	let hiddenValue = modal.getAttribute('aria-hidden');
 	if (hiddenValue === 'false') {
 		hiddenValue = 'true';
 	}
-	await modal.setAttribute('aria-hidden', hiddenValue);
+	modal.setAttribute('aria-hidden', hiddenValue);
 	openModalButton.focus();
 }
 
@@ -56,3 +55,8 @@ function trapFocus(e) {
 	// 	firstFocusableEl.focus();
 	// }
 }
+
+modalSetup(noJs, modal);
+openModalHandler();
+closeModalHandler();
+closeModalKeyHandler();

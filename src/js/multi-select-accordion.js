@@ -1,3 +1,8 @@
+import setInitialAriaValue from './helpers/set-aria';
+
+const buttons = document.querySelectorAll('.m-accordion__button');
+const contentSections = document.querySelectorAll('.m-accordion__content');
+
 function accordionToggleHandler(buttons) {
 	buttons.forEach((button) => {
 		button.addEventListener('click', toggleContent);
@@ -22,6 +27,10 @@ function toggleDetails(button) {
 	const setValue = hiddenValue === 'true' ? 'false' : 'true';
 	content.setAttribute('aria-hidden', setValue);
 }
+
+setInitialAriaValue(buttons, 'aria-expanded', 'false');
+setInitialAriaValue(contentSections, 'aria-hidden', 'true');
+accordionToggleHandler(buttons);
 
 export {
 	toggleButton,
