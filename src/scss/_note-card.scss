@@ -1,0 +1,25 @@
+.note-card {
+  padding: 0.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  color: $theme-primary;
+  box-shadow: inset 0 -0.1rem 0 $theme-primary;
+  transition: all 200ms linear, box-shadow 200ms linear;
+  font-family: 'Playfair Display', serif;
+
+  &:hover {
+    box-shadow: inset 0 -0.25rem 0 #E7DFC6;
+    color: #E7DFC6;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  & + & {
+    margin-top: 2rem;
+  }
+}
