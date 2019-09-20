@@ -16,36 +16,37 @@ function closeModalHandler() {
 	closeModalButton.addEventListener('click', closeModal);
 }
 
- function openModal(e) {
+function closeModalKeyHandler() {
+	document.addEventListener('keydown', closeModalEscKey);
+}
+
+const toggleHiddenValue = () => {
 	const hiddenValue = modal.getAttribute('aria-hidden');
 	const newValue = hiddenValue === 'true' ? 'false' : 'true';
 	modal.setAttribute('aria-hidden', newValue);
+}
+
+const openModal = (e) => {
+	toggleHiddenValue();
 
 	const formField = document.getElementById('newsletter-name');
 	formField.focus();
 	trapFocus(e);
 }
 
-function closeModal() {
-	let hiddenValue = modal.getAttribute('aria-hidden');
-	if (hiddenValue === 'false') {
-		hiddenValue = 'true';
-	}
-	modal.setAttribute('aria-hidden', hiddenValue);
+const closeModal = () => {
+	toggleHiddenValue();
+
 	openModalButton.focus();
 }
 
-function closeModalKeyHandler() {
-	document.addEventListener('keydown', closeModalEscKey);
-}
-
-function closeModalEscKey(e) {
+const closeModalEscKey = (e) => {
 	if (e.key === 'Escape') {
 		closeModal();
 	}
 }
 
-function trapFocus(e) {
+const trapFocus = (e) => {
 	const [...focusableElements] = modal.querySelectorAll('input', 'button', 'a') 
 	const lastFocusableEl = focusableElements[0];
 	const firstFocusableEl = focusableElements[focusableElements.length - 1];
@@ -60,3 +61,8 @@ modalSetup(noJs, modal);
 openModalHandler();
 closeModalHandler();
 closeModalKeyHandler();
+
+export {
+	toggleHiddenValue,
+	modalSetup,
+}
