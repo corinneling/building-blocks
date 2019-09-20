@@ -3,6 +3,7 @@ $theme-secondary: #009688;
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap');
 @import 'element.text';
+@import 'modal';
 @import 'multi-select-accordion';
 
 body {
@@ -23,7 +24,7 @@ body {
 
 .note-card {
   padding: 0.25rem;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,13 +34,18 @@ body {
   box-sizing: border-box;
   color: $theme-primary;
   box-shadow: inset 0 -0.1rem 0 $theme-primary;
-  transition: width 200ms linear, box-shadow 200ms linear 200ms;
+  transition: all 200ms linear, box-shadow 200ms linear;
   background-color: $theme-secondary;
   font-family: 'Playfair Display', serif;
 
   &:hover {
-    width: 100%;
-    box-shadow: inset 0 -0.3rem 0 $theme-primary;
+    box-shadow: inset 0 -0.25rem 0 #ddd;
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  & + & {
+    margin-top: 2rem;
   }
 }
 
