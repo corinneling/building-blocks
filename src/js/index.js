@@ -10,3 +10,9 @@ const contentSections = document.querySelectorAll('.m-accordion__content');
   setInitialAriaValue(contentSections, 'aria-hidden', 'true');
   accordionToggleHandler(buttons);
 // }
+
+
+// Modal
+const openModalButton = document.querySelector('.button--open-modal');
+const closeModalButton = document.querySelector('.button--close-modal');
+const modal = document.querySelector('.modal');
