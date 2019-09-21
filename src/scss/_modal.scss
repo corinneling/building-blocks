@@ -17,8 +17,7 @@
 	transition: all 200ms ease-in;
 	
 	&:hover {
-		color: #000;
-		background-color: lighten($theme-primary, 20%);
+		color: $theme-ternary;
 		transform: scale(0.98);
 	}
 	
@@ -40,12 +39,12 @@
 		font-size: 1rem;
 		font-weight: bold;
 		font-family: 'Poppins', sans-serif;
-		background-color: $theme-secondary;
+		background-color: $theme-ternary;
 		color: #fff;
 		transition: all 100ms linear;
 		
 		&:hover {
-			background-color: $theme-secondary;
+			background-color: $theme-ternary;
 			border-radius: 1rem;
 		}
 	}
@@ -56,15 +55,17 @@
 }
 
 .modal {
-	position: relative;
+	position: absolute;
+	top: 2rem;
+	left: 19vw;
 	z-index: 2;
-	max-width: 40rem;
+	width: 60%;
 	margin: auto;
 	margin-top: 2rem;
 	background-color: #fff;
 	padding: 1rem 2rem;
 	box-sizing: border-box;
-	border: 2px solid $theme-secondary;
+	border: 2px solid $theme-ternary;
 	
 	&[aria-hidden='false'] {
 		display: block;
@@ -81,6 +82,10 @@
 	
 	&[aria-hidden='true'] {
 		display: none;
+	}
+
+	h1 {
+		font-size: 1.25rem;
 	}
 }
 
@@ -123,11 +128,11 @@
 		font-size: 1.125rem;
 		letter-spacing: 0.0625rem;
 		background-color: #fff;
-		border: 2px solid $theme-primary;
+		border: 2px solid $theme-ternary;
 		
 		&:focus {
 			color: #fff;
-			background-color: $theme-primary;
+			background-color: $theme-ternary;
 		}
 	}
 }
