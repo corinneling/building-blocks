@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
-import { toggleButton, toggleDetails } from '../js/multi-select-accordion';
+import { toggleButton, toggleDetails } from '../js/multi-select-accordion/helpers';
 
 describe('Set Aria Value - Helper', () => {
   describe('toggleButton', () => {
