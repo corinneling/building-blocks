@@ -5,8 +5,8 @@ module.exports = {
   devtool: 'eval-source-map',
   mode: 'development',
   entry: {
-    modal: './src/js/modal.js',
-    multiSelectAccordion: './src/js/multi-select-accordion.js'
+    modal: './src/js/modal/index.js',
+    multiSelectAccordion: './src/js/multi-select-accordion/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist/js'),
