@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
 import { modalSetup, toggleHiddenValue } from '../js/modal/helpers';
-// TO DO: see if i can add more tests to this file, such as testing focus management
+// TODO: see if i can add more tests to this file, such as testing focus management
 
 describe('Modal', () => {
   beforeEach(() => {

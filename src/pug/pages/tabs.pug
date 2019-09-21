@@ -1,0 +1,39 @@
+extends ../layout
+
+block variables
+  - let title = 'Tabs';
+  - let description = 'ingredients for building modern, performant, accessible websites';
+  - let mainClass = 'theme-accordion l--border';
+
+
+block content
+  h1.component-heading Tabs
+    .tabs
+      .tabs__nav(role="tablist")
+        button(role="tab" aria-selected="true" aria-controls="tab-panel-1" tabindex="0")#tab-1.tabs__button Resources
+        button(role="tab" aria-selected="false" aria-controls="tab-panel-2" tabindex="-1")#tab-2.tabs__button ARIA Attributes
+        button(role="tab" aria-selected="false" aria-controls="tab-panel-3" tabindex="-1")#tab-3.tabs__button Expected Behavior
+      #tab-panel-1.tabs__container(role="tabpanel" aria-hidden="false" aria-labelledby="tab-1")
+        ul
+          li
+            a(href="https://www.deque.com/blog/a11y-support-series-part-1-aria-tab-panel-accessibility/") Deque Article
+          li
+            a(href="https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html") W3C Example of Tabs
+          li
+            a(href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel") WAI-ARIA Tabpanel
+      #tab-panel-2.tabs__container(role="tabpanel" aria-hidden="true" aria-labelledby="tab-2")
+        ul
+          li
+            a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-selected") aria-selected
+          li
+            a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-controls") aria-controls
+          li
+            a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-hidden") aria-hidden
+          li
+            a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby") aria-labelledby
+      #tab-panel-3.tabs__container(role="tabpanel" aria-hidden="true" aria-labelledby="tab-3")
+        ul
+          li Users can tab to the tablist which will focus on the first button
+          li Then users can use right and left arrows to navigate between the tabs
+          li Users should also be able to navigate between the tabs with a mouse or trackpad
+          li When using VO, users can navigate between the tabs with VO + Right Arrow. And, they can select a tab with VO + Space

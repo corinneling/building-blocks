@@ -1,7 +1,8 @@
 .tabs {
 	display: flex;
 	flex-direction: column;
-	margin: 0 5vw;
+	margin: 2rem auto 0;
+	max-width: 46rem;
 	
 	&__nav {
 		width: 100%;
@@ -17,13 +18,12 @@
 		position: relative;
 		z-index: 9;
 		flex-grow: 1;
-		padding: 0.5em 0.25em;
-		font-size: 1.125em;
-		border: 2px solid;
-		background-color: #fff;
-		color: #222;
-		border-bottom: none;
-		font-family: 'Poppins', sans-serif;
+		padding: 0.75rem 0.25rem;
+		font-size: 1.25rem;
+		background-color: $c-white;
+		color: $theme-primary;
+		border: none;
+		font-family: $font-secondary;
 		transition: all 150ms ease;
 		
 		@media (min-width: 29.75rem) {
@@ -37,15 +37,15 @@
 		}
 		
 		&[aria-selected="false"] {
-			background-color: #fff;
+			background-color: $c-white;
 			border-color: $theme-primary;
-			color: #222;
+			color: $theme-primary;
 		}
 		
 		&:hover {
 			background-color: #444;
 			border-color: #444;
-			color: #fff;
+			color: $c-white;
 			text-decoration: underline;
 		}
 		
@@ -54,13 +54,16 @@
 		&[aria-selected="true"] {
 			background-color: $theme-primary;
 			border-color: $theme-primary;
-			color: #fff;
+			color: $c-white;
 		}
 	}
 	
 	&__container {
+		text-align: left;
+		font-family: $font-secondary;
+		font-size: 1rem;
 		padding: 1rem 2rem;
-		border-top: 2px solid #765fe7;
+		border-top: 2px solid $theme-purple;
 
 		&[aria-hidden="true"] {
 			display: none;
@@ -68,7 +71,7 @@
 		
 		&[aria-hidden="false"] {
 			display: block;
-			background-color: #fff;
+			background-color: $c-white;
 			box-shadow: 2px 6px 10px 1px rgba(0, 0, 0, 0.1);
 		}
 	}
