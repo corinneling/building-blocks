@@ -1,0 +1,75 @@
+.tabs {
+	display: flex;
+	flex-direction: column;
+	margin: 0 5vw;
+	
+	&__nav {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: 29.75rem) {
+			flex-direction: row;
+		}
+	}
+	
+	&__button {
+		position: relative;
+		z-index: 9;
+		flex-grow: 1;
+		padding: 0.5em 0.25em;
+		font-size: 1.125em;
+		border: 2px solid;
+		background-color: #fff;
+		color: #222;
+		border-bottom: none;
+		font-family: 'Poppins', sans-serif;
+		transition: all 150ms ease;
+		
+		@media (min-width: 29.75rem) {
+			border-radius: 0.5rem 0.5rem 0 0;
+		}
+		
+		& + & {
+			@media (min-width: 29.75rem) {
+			margin-left: 0.25rem;
+			}
+		}
+		
+		&[aria-selected="false"] {
+			background-color: #fff;
+			border-color: $theme-primary;
+			color: #222;
+		}
+		
+		&:hover {
+			background-color: #444;
+			border-color: #444;
+			color: #fff;
+			text-decoration: underline;
+		}
+		
+		&:active,
+		&:focus,
+		&[aria-selected="true"] {
+			background-color: $theme-primary;
+			border-color: $theme-primary;
+			color: #fff;
+		}
+	}
+	
+	&__container {
+		padding: 1rem 2rem;
+		border-top: 2px solid #765fe7;
+
+		&[aria-hidden="true"] {
+			display: none;
+		}
+		
+		&[aria-hidden="false"] {
+			display: block;
+			background-color: #fff;
+			box-shadow: 2px 6px 10px 1px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
