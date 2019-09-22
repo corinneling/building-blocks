@@ -1,0 +1,30 @@
+extends ../layout
+
+block variables
+  - let title = 'Modal';
+  - let description = 'ingredients for building modern, performant, accessible websites';
+  - let mainClass = 'theme-modal l--border no-js';
+
+block content
+  h1.component-heading Modal
+  section.wrapper
+    button(aria-describedby="open-modal").button.button--open-modal Sign Up For Our Newsletter
+
+block outside-content
+  div(role="dialog" aria-labelledby="modal-description" aria-hidden="false").modal
+    h1#modal-description Sign Up For Our Newsletter
+    p Just kidding, it's fake!
+
+    form.form
+      .form-field
+        label(for="newsletter-name").form-field__label Name:
+        input(type="text").form-field__input#newsletter-name
+      .form-field
+        label(for="newsletter-email").form-field__label Email:
+        input(type="email").form-field__input#newsletter-email
+      input(type="submit").button.button--form-field
+
+    button(aria-label="Close Modal").button--close-modal X
+
+  span(aria-hidden="true").description#open-modal Opens Modal
+  .modal-backdrop

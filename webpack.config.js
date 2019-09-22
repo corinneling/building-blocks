@@ -1,16 +1,23 @@
 const path = require('path');
+const fs = require('fs')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
+const PATHS = {
+  src: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist'),
+}
+const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
   devtool: 'eval-source-map',
   mode: 'development',
-  entry: {
-    modal: './src/js/modal/index.js',
-    multiSelectAccordion: './src/js/multi-select-accordion/index.js'
-  },
+  entry: './src/js/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
-    filename: '[name].js' // to do: add content hashing -> filename: '[name]-[contenthash:8].js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name]-[contenthash:8].js',
   },
   module: {
     rules: [
@@ -22,14 +29,19 @@ module.exports = {
         }
       },
       {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
+      {
         test: /\.css/,
         loader: 'style-loader!css-loader'
       }
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([
-      {from:'src/markup',to:'../'} 
-    ]),
+    ...PAGES.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page.replace(/\.pug/,'.html')}`
+    }))
   ]
 };

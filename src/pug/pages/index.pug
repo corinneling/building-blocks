@@ -1,0 +1,13 @@
+extends ../layout
+
+block variables
+  - let title = 'Ingredients';
+  - let description = 'ingredients for building modern, performant, accessible websites';
+  - let pageClass = 'theme-home';
+  - let mainClass = 'l--center';
+
+block content
+  h1 Ingredients
+  section
+    a(href='./modal.html').note-card Modal
+    a(href='./multi-select-accordion.html').note-card Multi-select Accordion

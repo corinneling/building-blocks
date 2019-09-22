@@ -6,7 +6,9 @@ const modal = document.querySelector('.modal');
 const noJs = document.querySelector('.no-js');
 const formField = document.getElementById('newsletter-name');
 
-modalSetup(noJs, modal);
-openModalHandler(openModalButton, modal, formField);
-closeModalHandler(closeModalButton, modal, openModalButton);
-closeModalKeyHandler();
+if (modal) {
+  modalSetup(noJs, modal);
+  openModalHandler(openModalButton, modal, formField);
+  closeModalHandler(closeModalButton, modal, openModalButton);
+  closeModalKeyHandler();
+}
