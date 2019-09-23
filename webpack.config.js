@@ -1,6 +1,5 @@
 const path = require('path');
-const fs = require('fs')
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -31,10 +30,6 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: 'pug-loader'
-      },
-      {
-        test: /\.css/,
-        loader: 'style-loader!css-loader'
       }
     ]
   },
@@ -42,6 +37,6 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
-    }))
+    })),
   ]
 };
