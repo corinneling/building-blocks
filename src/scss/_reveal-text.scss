@@ -1,0 +1,60 @@
+
+.reveal-text {
+  overflow: hidden;
+  display: block;
+  line-height: 1.25;
+  position: relative;
+  padding: 0 1rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: $theme-primary;
+    animation: revealBefore 1.25s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+    transform: translateX(-101%);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: $c-white;
+    animation: revealAfter 1.25s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+    transform: translateX(0);
+  }
+
+  &:nth-child(1)::before,
+  &:nth-child(1)::after {
+    animation-delay: 0.5s;
+  }
+
+  &:nth-child(2)::before,
+  &:nth-child(2)::after {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes revealBefore {
+  from {
+    transform: translateX(-100%)
+  }
+  to {
+    transform: translateX(101%)
+  }
+}
+
+@keyframes revealAfter {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(200%)
+  }
+}

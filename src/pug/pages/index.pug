@@ -1,13 +1,25 @@
 extends ../layout
 
 block variables
-  - let title = 'Ingredients';
+  - let title = 'Redesign';
   - let description = 'ingredients for building modern, performant, accessible websites';
-  - let pageClass = 'theme-home';
-  - let mainClass = 'l--center';
+  - let pageClass = 'theme-showcase';
+  - let mainClass = 'showcase';
 
 block content
-  h1 Ingredients
-  section
-    a(href='./modal.html').note-card Modal
-    a(href='./multi-select-accordion.html').note-card Multi-select Accordion
+  .block.block--upper
+    .heading-wrapper
+      h1.reveal-text Building Blocks
+      p.reveal-text components for building modern, performant, accessible websites
+  .block.block--lower
+    .showcase__cards.showcase--position
+      a(href="./multi-select-accordion.html").card
+        h2 Accordion
+      a(href="./modal.html").card
+        h2 Modal
+      a(href="#").card
+        h2 Tabs
+      a(href="#").card
+        h2 Carousel
+      a(href="#").card
+        h2 Notification

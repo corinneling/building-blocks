@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 const PATHS = {
@@ -38,5 +39,8 @@ module.exports = {
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
     })),
+    new CopyWebpackPlugin([
+      {from:'src/assets',to:'../dist/assets/'}
+    ]),	
   ]
 };

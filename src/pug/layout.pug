@@ -12,6 +12,11 @@ html(lang='en')
     block head
 
   body(class=pageClass)
+    header.header
+      nav.nav
+        a(href="/").nav__link Home
+        a(href="#").nav__link About
+        a(href="#").nav__link Resources
     main(class=mainClass)
       block content
     block outside-content

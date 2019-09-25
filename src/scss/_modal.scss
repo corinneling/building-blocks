@@ -5,19 +5,19 @@
 
 .button {
 	border: none;
-	font-family: 'Poppins', sans-serif;
+	font-family: $font-secondary;
 	font-weight: 700;
 	font-size: 1rem;
 	letter-spacing: 0.04rem;
 	background-color: $theme-primary;
-	color: #fff;
+	color: $c-white;
 	padding: 0.5rem 1rem;
 	border-radius: 1.25rem;
 	transform: scale(1.1);
 	transition: all 200ms ease-in;
 	
 	&:hover {
-		color: $theme-ternary;
+		color: $theme-blue;
 		transform: scale(0.98);
 	}
 	
@@ -38,13 +38,13 @@
 		line-height: 1.5;
 		font-size: 1rem;
 		font-weight: bold;
-		font-family: 'Poppins', sans-serif;
-		background-color: $theme-ternary;
-		color: #fff;
+		font-family: $font-secondary;
+		background-color: $theme-blue;
+		color: $c-white;
 		transition: all 100ms linear;
 		
 		&:hover {
-			background-color: $theme-ternary;
+			background-color: $theme-blue;
 			border-radius: 1rem;
 		}
 	}
@@ -62,10 +62,10 @@
 	width: 60%;
 	margin: auto;
 	margin-top: 2rem;
-	background-color: #fff;
+	background-color: $c-white;
 	padding: 1rem 2rem;
 	box-sizing: border-box;
-	border: 2px solid $theme-ternary;
+	border: 2px solid $theme-blue;
 	
 	&[aria-hidden='false'] {
 		display: block;
@@ -76,7 +76,7 @@
 		z-index: 1;
 		width: 100%;
 		border: none;
-		background-color: #f2f2f2;
+		background-color: darkent($c-white, 2%);
 		margin-top: 5rem;
 	}
 	
@@ -127,12 +127,12 @@
 		font-weight: bold;
 		font-size: 1.125rem;
 		letter-spacing: 0.0625rem;
-		background-color: #fff;
-		border: 2px solid $theme-ternary;
+		background-color: $c-white;
+		border: 2px solid $theme-blue;
 		
 		&:focus {
-			color: #fff;
-			background-color: $theme-ternary;
+			color: $c-white;
+			background-color: $theme-blue;
 		}
 	}
 }
