@@ -3,12 +3,13 @@ extends ../layout
 block variables
   - let title = 'Modal';
   - let description = 'ingredients for building modern, performant, accessible websites';
-  - let mainClass = 'theme-modal l--border no-js';
+  - let mainClass = 'l--border no-js';
 
 block content
   h1.component-heading Modal
-  section.wrapper
-    button(aria-describedby="open-modal").button.button--open-modal Sign Up For Our Newsletter
+  section.component-wrapper
+    .wrapper
+      button(aria-describedby="open-modal").button.button--open-modal Sign Up For Our Newsletter
 
 block outside-content
   div(role="dialog" aria-labelledby="modal-description" aria-hidden="false").modal
