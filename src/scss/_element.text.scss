@@ -32,12 +32,13 @@ $font-secondary: 'Roboto', sans-serif;
     color: $theme-primary;
   }
 }
-
 .component-heading {
   font-family: $font-primary;
   font-size: 4rem;
   text-align: center;
-  margin: 0 auto 3rem;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  border-bottom: 1px solid #2b2a2e;
 }
 
 h1 {
