@@ -13,32 +13,51 @@ $font-primary: 'Zoika', Fallback, sans-serif;
 $font-secondary: 'Roboto', sans-serif;
 
 .heading-wrapper {
-  position: relative;
-  top: 8vh;
   display: inline-block;
+
+  @media (min-width: 32rem) {
+    position: relative;
+    top: 8vh;
+  }
 
   h1 {
     line-height: 1;
     font-family: $font-primary;
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 0;
     color: $theme-primary;
+
+    @media (min-width: 32rem) {
+      font-size: 5rem;
+    }
   }
 
   p {
     font-family: $font-secondary;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-align: left;
     color: $theme-primary;
+
+    @media (min-width: 32rem) {
+      font-size: 1.5rem;
+    }
   }
 }
 .component-heading {
   font-family: $font-primary;
-  font-size: 4rem;
+  font-size: 3rem;
+  padding: 1rem;
+  line-height: 1;
+  padding-bottom: 2rem;
   text-align: center;
   box-sizing: border-box;
   margin-bottom: 0;
   border-bottom: 1px solid #2b2a2e;
+
+  @media (min-width: 32rem) {
+    padding: 0;
+    padding-bottom: 1.5rem;
+  }
 }
 
 h1 {

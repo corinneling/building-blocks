@@ -5,22 +5,15 @@ $theme-purple: lighten(#7b80b5, 5%);
 $theme-yellow: #f0f095;
 $c-white: #fff;
 
-// .theme-modal {
-//   background-color: $theme-blue;
-// }
-
-// .theme-accordion {
-//   background-color: $theme-purple;
-// }
-
-// .theme-showcase {
-//   margin: 0;
-// }
-
 .component-wrapper {
-  padding: 6rem;
+  padding: 2rem;
   margin: auto;
   box-sizing: border-box;
-  min-height: 80vh;
+  min-height: 87vh;
   background-color: #eee;
+  overflow: hidden;
+
+  @media (min-width: 32rem) {
+    padding: 6rem;
+  }
 }

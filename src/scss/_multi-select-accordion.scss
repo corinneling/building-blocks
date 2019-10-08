@@ -39,7 +39,7 @@
     }
 
     &[aria-expanded='true'] {
-      background-color: darken($c-white, 4%);
+      background-color: $c-white;
       color: $theme-primary;
     }
 
@@ -54,7 +54,7 @@
     padding: 0.875rem;
     margin-left: 0;
     margin-top: -0.25rem;
-    background-color: $theme-purple;
+    background-color: #fff;
     color: $theme-primary;
     line-height: 1.5;
     font-family: sans-serif;

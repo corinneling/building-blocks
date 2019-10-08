@@ -1,15 +1,20 @@
 .header {
-  height: 0;
+  @media (min-width: 32rem) {
+    height: 0;
+  }
 }
 
 .nav {
-  width: 100vh;
-  transform: rotate(90deg) translateX(-60px);
   transform-origin: bottom left;
   background-color: $theme-primary;
   height: 4rem;
   position: relative;
   top: -0.25rem;
+
+  @media (min-width: 32rem) {
+    transform: rotate(90deg) translateX(-60px);
+    width: 100vh;
+  }
 
   &__link {
     font-size: 1.125rem;
