@@ -1,0 +1,45 @@
+.notes {
+  background-color: #fff;
+  box-shadow: 4px -6px 10px -4px rgba(0, 0, 0, 0.15);
+  padding: 1rem 2rem;
+  border-top: 2px solid #222;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.code {
+  margin-top: 2rem;
+
+  &__link {
+    display: block;
+    font-size: 1.125rem;
+    font-family: $font-secondary;
+    color: $theme-primary;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      display: block;
+      background-color: $theme-purple;
+      transform: scaleX(0);
+      transform-origin: 100% 0%;
+      transition: transform 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &:hover {
+      color: $theme-purple;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: 0 50%;
+    }
+  }
+}

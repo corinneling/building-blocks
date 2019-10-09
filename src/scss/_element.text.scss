@@ -67,11 +67,23 @@ h1 {
   color: $theme-primary;
 }
 
+h2 {
+  line-height: 1;
+  font-family: $font-primary;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: $theme-primary;
+
+  @media (min-width: 32rem) {
+    font-size: 1.75rem;
+  }
+}
+
 p {
   font-family: $font-secondary;
   font-size: 0.875rem;
   margin-bottom: 0;
-  text-align: center;
+  text-align: left;
 
   @media (min-width: 50rem) {
     font-size: 1.25rem;

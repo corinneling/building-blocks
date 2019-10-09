@@ -12,8 +12,24 @@ body {
   max-width: 40rem;
 
   @media (min-width: 50rem) {
-    .l--center {
-      padding: 0;
-    }
+    padding: 0;
   }
+}
+
+.l-column {
+  width: 100%;
+
+  @media (min-width: 50rem) {
+    width: 45%;
+  }
+}
+
+.l-column--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.l-column--right {
+  background-color: #fff;
 }

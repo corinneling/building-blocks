@@ -8,43 +8,55 @@ block variables
 block content
   h1.component-heading Multi Select Accordion
   section.component-wrapper
-    dl.m-accordion
-      dt
-        button(aria-expanded="true" aria-controls="m-accordion-resources").m-accordion__button What resources did you use to build this?
-      dd(aria-hidden="false").m-accordion__content#m-accordion-resources
-        ul
-          li
-            a(href="https://www.w3.org/TR/wai-aria-practices/#disclosure") Disclosure (FAQ) Design Pattern
-          li
-            a(href="https://www.w3.org/TR/wai-aria-practices/examples/disclosure/disclosure-faq.html") Disclosure (FAQ) Example
-          li
-            a(href="https://www.w3.org/TR/wai-aria-practices/#m-accordion") Accordion Design Pattern
-          li
-            a(href="https://www.w3.org/TR/wai-aria-practices/examples/m-accordion/m-accordion.html") Accordion Example
-      dt
-        button(aria-expanded="true" aria-controls="m-accordion-markup").m-accordion__button What are the HTML tags and ARIA attributes used?
-      dd(aria-hidden="false").m-accordion__content#m-accordion-markup
-        ul
-          li
-            a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section") section
-          li
-            a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button") button
-          li
-            a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl") dl
-          li
-            a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt") dt
-          li
-            a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd") dd
-          li
-            a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded") aria-expanded
-          li
-            a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-controls") aria-controls
-      dt
-        button(aria-expanded="true" aria-controls="m-accordion-behavior").m-accordion__button What is the expected behavior of this component?
-      dd(aria-hidden="false").m-accordion__content#m-accordion-behavior
-        ul
-          li Users can tab to an accordion button which will show focus that button
-          li When using a keyboard and the NVDA screen reader users can hit Enter or Space to toggle the content for the focused m-accordion button
-          li When using the VO screen reader users can navigate to the button with Control + Option + Space
-          li Then when focused on the button, VO users can toggle the content with Control + Option + Space
+    .l-column.l-column--left
+      .component
+        h2 Component
+        dl.m-accordion
+          dt
+            button(aria-expanded="true" aria-controls="m-accordion-resources").m-accordion__button What resources did you use to build this?
+          dd(aria-hidden="false").m-accordion__content#m-accordion-resources
+            ul
+              li
+                a(href="https://www.w3.org/TR/wai-aria-practices/#disclosure") Disclosure (FAQ) Design Pattern
+              li
+                a(href="https://www.w3.org/TR/wai-aria-practices/examples/disclosure/disclosure-faq.html") Disclosure (FAQ) Example
+              li
+                a(href="https://www.w3.org/TR/wai-aria-practices/#m-accordion") Accordion Design Pattern
+              li
+                a(href="https://www.w3.org/TR/wai-aria-practices/examples/m-accordion/m-accordion.html") Accordion Example
+          dt
+            button(aria-expanded="true" aria-controls="m-accordion-markup").m-accordion__button What are the HTML tags and ARIA attributes used?
+          dd(aria-hidden="false").m-accordion__content#m-accordion-markup
+            ul
+              li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section") section
+              li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button") button
+              li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl") dl
+              li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt") dt
+              li
+                a(href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd") dd
+              li
+                a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded") aria-expanded
+              li
+                a(href="https://www.w3.org/TR/wai-aria-1.1/#aria-controls") aria-controls
+          dt
+            button(aria-expanded="true" aria-controls="m-accordion-behavior").m-accordion__button What is the expected behavior of this component?
+          dd(aria-hidden="false").m-accordion__content#m-accordion-behavior
+            ul
+              li Users can tab to an accordion button which will show focus that button
+              li When using a keyboard and the NVDA screen reader users can hit Enter or Space to toggle the content for the focused m-accordion button
+              li When using the VO screen reader users can navigate to the button with Control + Option + Space
+              li Then when focused on the button, VO users can toggle the content with Control + Option + Space
+      .code
+        h2 Links
+        a.code__link(href="https://github.com/corinneling/building-blocks/tree/master/src/pug/pages/multi-select-accordion.pug") accordion markup - on github
+        a.code__link(href="https://github.com/corinneling/building-blocks/tree/master/src/scss/_modal.scss") accordion styles - on github
+        a.code__link(href="https://github.com/corinneling/building-blocks/tree/master/src/js/modal") accordion javascript - on github
+    .l-column.l-column--right
+      .notes
+        h2 Notes
+        p When working on the HTML of an accordion make sure to include the following tags:
 
