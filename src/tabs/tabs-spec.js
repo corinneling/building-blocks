@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom'; 
-import { 	resetPreviousActiveTab, hidePreviousTabPanel, selectTab } from '../js/tabs/helpers';
+import { 	resetPreviousActiveTab, hidePreviousTabPanel, selectTab } from './helpers';
 
 describe('Tabs', () => {
   beforeEach(() => {

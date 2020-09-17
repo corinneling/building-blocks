@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
-import setInitialAriaValue from '../js/helpers/set-aria';
+import setInitialAriaValue from './set-aria';
 
 describe('Set Aria Value - Helper', () => {
   beforeEach(() => {

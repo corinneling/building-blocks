@@ -6,6 +6,6 @@
 @import 'showcase';
 
 // Components
-@import 'modal';
-@import 'multi-select-accordion';
-@import 'tabs';
+@import '../modal/modal';
+@import '../multi-select-accordion/multi-select-accordion';
+@import '../tabs/tabs';
