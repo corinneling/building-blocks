@@ -39,8 +39,10 @@ module.exports = {
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
     })),
-    new CopyWebpackPlugin([
-      {from:'src/assets',to:'../dist/assets/'}
-    ]),	
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets', to: '../dist/assets/' },
+      ],
+    }),	
   ]
 };
