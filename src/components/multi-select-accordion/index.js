@@ -1,4 +1,4 @@
-import setInitialAriaValue from '../helpers/set-aria';
+import setInitialAriaValue from '../../helpers/set-aria';
 import { accordionToggleHandler } from './helpers';
 
 const buttons = document.querySelectorAll('.m-accordion__button');

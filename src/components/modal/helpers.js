@@ -42,7 +42,7 @@ const closeModalEscKey = (e) => {
 
 // To Do: finish this to trap focus
 const trapFocus = () => {
-	const [...focusableElements] = modal.querySelectorAll('input', 'button', 'a') 
+	const [...focusableElements] = modal.querySelectorAll('input', 'button', 'a')
 	const lastFocusableEl = focusableElements[0];
 	const firstFocusableEl = focusableElements[focusableElements.length - 1];
 	// if(document.activeElement === firstFocusableEl) {

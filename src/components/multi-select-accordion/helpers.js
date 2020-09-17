@@ -18,7 +18,7 @@ function toggleButton(button) {
 function toggleDetails(button) {
 	const buttonAriaControl = button.getAttribute('aria-controls');
 	const content = document.getElementById(buttonAriaControl);
-  const hiddenValue = content.getAttribute('aria-hidden');
+	const hiddenValue = content.getAttribute('aria-hidden');
 	const setValue = hiddenValue === 'true' ? 'false' : 'true';
 	content.setAttribute('aria-hidden', setValue);
 }
@@ -26,5 +26,5 @@ function toggleDetails(button) {
 export {
 	toggleButton,
 	toggleDetails,
-  accordionToggleHandler,
+	accordionToggleHandler,
 }
